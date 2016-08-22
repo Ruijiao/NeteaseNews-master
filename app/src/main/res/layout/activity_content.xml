@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_back_color"
+    android:orientation="vertical" >
+
+    <com.jackie.neteasenews.view.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/content_bable"
+        android:background="#EEF3FA"/>
+
+    <RelativeLayout
+        android:id="@+id/content_bable"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.viewpagerindicator.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/indicator_arrow"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:id="@+id/indicator_arrow"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:paddingRight="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_5"
+            android:src="@drawable/arrow_down"
+            android:background="#999999"/>
+
+    </RelativeLayout>
+</RelativeLayout>
